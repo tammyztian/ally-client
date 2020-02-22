@@ -6,11 +6,11 @@ import {Provider} from 'react-redux';
 import store from './store';
 import './index.css';
 import Confirmation from './components/confirmation';
-
+import SignIn from './components/SignIn';
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <Confirmation />
+            <SignIn />
         </Router>
     </Provider>,
     document.getElementById('root')

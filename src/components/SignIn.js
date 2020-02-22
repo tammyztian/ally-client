@@ -1,37 +1,43 @@
 import React from 'react';
+import {Field, reduxForm} from 'redux-form';
+import Input from './input';
+import {isTrimmed, required, nonEmpty, length} from '../validators';
 
-export default class SignIn extends React.Component {
+const passwordLength = length({min: 10, max: 72});
+
+export  class SignIn extends React.Component {
 
     render() {
         return (
-            <form
-                className="SignIn"
-                onSubmit={this.props.handleSubmit(values =>
-                    this.onSubmit(values)
-                )}>
+            <form className="SignIn">
+        
                 <label htmlFor="phone number">phone number</label>
-                <Field component={Input} type="text" name="phone number" />
+                <Field 
+                    component={Input} 
+                    type="text" 
+                    name="phone number"
+                 />
                 <label htmlFor="password">password</label>
-                <Field component={Input} type="text" name="password" />
-                <Field
+
+                <Field 
                     component={Input}
                     type="text"
-                    name="phone number"
-                    validate={[required, nonEmpty, isTrimmed]}
+                    name="password" 
                 />
-                <label htmlFor="password">password</label>
-                <Field
-                    component={Input}
-                    type="password"
-                    name="password"
-                    validate={[required, passwordLength, isTrimmed]}
-                />
+                
+            
                 <button
                     type="submit"
-                    disabled={this.props.pristine || this.props.submitting}>
-                    <link to="Allybutton">Sign In</link>
+                    // <link to="Allybutton">Sign In</link
+                >
                 </button>
             </form>
         );
     }
 }
+
+
+export default reduxForm({
+    form: 'registration',
+   
+})(SignIn);
