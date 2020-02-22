@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import AllyLandingPage from './components/AllyLandingPage';
-// import App from './components/app';
+import App from './components/app';
 import store from './store';
 import './index.css';
 
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <AllyLandingPage />
+            <App/>
         </Router>
     </Provider>,
     document.getElementById('root')
