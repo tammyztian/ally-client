@@ -1,0 +1,19 @@
+.ally-button {
+padding: 20px 25px;
+background-color:red;
+border-radius: 250%;
+outline: none;
+cursor: pointer;
+height: 200px;
+width: 200px;
+text-align: center;
+vertical-align: middle;
+display: table-cell;
+box-shadow: 0 10px black;
+
+}
+.ally-button:hover {
+transform: translateY(4px);
+background-color: darkred;
+box-shadow: 0 9px white;
+}

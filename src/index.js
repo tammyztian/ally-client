@@ -8,13 +8,15 @@ import store from './store';
 import './index.css';
 import Password from './components/Password';
 import SignIn from './components/SignIn'
+import AllyButton from './components/Allybutton'
+
 
 
 
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <SignIn/>
+            <AllyButton/>
         </Router>
     </Provider>,
     document.getElementById('root')
