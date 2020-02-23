@@ -1,34 +1,39 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  background-image: url(https://wallpaperplay.com/walls/full/6/9/9/54512.jpg#.XlGewdlY2e8.link);
-  background-position: fixed;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  background-image: url(https://i.pinimg.com/originals/a3/97/1f/a3971fe34ad0519b42f9931631f50175.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
   background-repeat: no-repeat;
   opacity: 0.8;  
+  color: black !important;
 }
+
+
 
 .h1 {
   font-size: 40px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
-  color: antiquewhite;
+  color: black;
 }
 
 label {
-  color: whitesmoke;
-  font-family: 'Times New Roman', Times, serif;
+  color: black;
   font-size: 30px;
   font-style: bold;
 }
 
 button {
   background-color: transparent;
-  color: aliceblue;
+  color: black;
   font-size: 14px;
   text-align: center;
   border: 2px solid aliceblue;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .SignIn {
@@ -47,5 +52,22 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+
+
+.sign-up {
+  text-align: center;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  padding: 100px 300px;
+  position: fixed;
+  bottom:25%;
+  left:25%;
+  margin-top: -50px;
+  margin-left: -50px;
+  color: black !important;
 
 }

@@ -51,10 +51,19 @@ export  class SignIn extends React.Component {
         return (
             console.log('== this is state logged ins==', this.state.loggedIn),
 
+<div class="sign-up">
+
             <form 
+<<<<<<< HEAD
                 className="signin-form"
                 onSubmit={(e) => this.onSubmit(e)}
             >
+=======
+                
+                onSubmit={this.props.handleSubmit(values =>
+                this.onSubmit(values)
+            )}>
+>>>>>>> 0312a4e835cec9d0d3af2e3ebb4f3994249bb25f
             
         
                 <label htmlFor="phoneNumber">Phone Number</label>
@@ -83,6 +92,7 @@ export  class SignIn extends React.Component {
                 </button>
 
             </form>
+            </div>
         );
     }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router';
 import Container from 'react-bootstrap/Container'
+import '../index.css';
+
 
 export default class Contactpage extends React.Component {
     constructor() {
@@ -28,7 +30,7 @@ export default class Contactpage extends React.Component {
     
       render() {
         return (
-        <div className=''>
+        <div className='sign-up'>
            <h1>Contacts</h1>
           <form>
             <label>
