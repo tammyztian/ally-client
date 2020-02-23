@@ -24,8 +24,10 @@ export  class SignIn extends React.Component {
 
         return (
 
+<div class="sign-up">
+
             <form 
-                className="signin-form"
+                
                 onSubmit={this.props.handleSubmit(values =>
                 this.onSubmit(values)
             )}>
@@ -57,6 +59,7 @@ export  class SignIn extends React.Component {
                 </button>
 
             </form>
+            </div>
         );
     }
 }
