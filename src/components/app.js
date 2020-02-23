@@ -3,10 +3,12 @@ import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 
 import HeaderBar from './header-bar';
-import LandingPage from './landing-page';
+// import LandingPage from './landing-page';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
+import { AllyLandingPage } from './AllyLandingPage';
+import AddContact from './AddContact';
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
@@ -42,9 +44,11 @@ export class App extends React.Component {
         return (
             <div className="app">
                 <HeaderBar />
-                <Route exact path="/" component={LandingPage} />
+                <Route exact path="/" component={AllyLandingPage} />
                 <Route exact path="/dashboard" component={Dashboard} />
-                <Route exact path="/register" component={RegistrationPage} />
+                <Route exact path="/register" component={AddContact} />
+                <Route exact path="/add-contact" component={AddContact} />
+
             </div>
         );
     }
