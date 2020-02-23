@@ -1,5 +1,10 @@
 import React from 'react';
 import {Route} from 'react-router';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+
 
 export default class Password extends React.Component {
 
@@ -14,12 +19,26 @@ export default class Password extends React.Component {
             confirmPassword : "",
         }
     }
+
+
     
     validateInputs(){
-        if(this.state.password == this.state.confirmPassword) {
+        if(this.state.password === this.state.confirmPassword) {
             console.log("Go to Next Page");
         }else {
             console.log("Stay in same Page");
+        }
+
+        if (this.state.password === "") {
+            console.log("need password")
+        }
+
+        if (this.state.confirmPassword === "") {
+            console.log("need to confirm password")
+        }
+
+        if (this.state.password > 6 ){
+            console.log('pw need to be longer than 6 character')
         }
 
     }
@@ -36,26 +55,17 @@ export default class Password extends React.Component {
          return (
 
             <div className="sign-up">
-               
-            Your Number :   <input  type="text" name="number" />
+            <p> Your Number:   <input  type="text" name="number" /></p><br/>
 
-        
+            <p> Password: <input type="text" name="password" min={6} required value ={this.state.password} 
+              onChange = {this.setPassword}/></p><br/>
+
+             <p>Confirm Password: <input type="text" name="confirm-password" min={6} required value ={this.state.confirmPassword}
+                onChange = {this.setConfirmPassword}/></p><br/>
               
-               <br/>
-               
-                 Password: <input type="text" name="password" min="6" max="25" required value ={this.state.password} 
-                 onChange = {this.setPassword}/>
-                 <br/>
-                 Confirm Password: <input type="text" name="confirm-password" min="6" max="25" required value ={this.state.confirmPassword}
-                   onChange = {this.setConfirmPassword}/>
-                 <br/>
-                 <button onClick = {this.validateInputs} >Button > Assign Contact</button>
-             
-            </div>
-
+             <button onClick = {this.validateInputs} >Button > Assign Contact</button>
           
+         </div> 
          );
      }
-
-
  }
