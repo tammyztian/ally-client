@@ -1,6 +1,7 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import Input from './input';
+import '../index.css';
 import {login} from '../actions/auth';
 import {required, nonEmpty} from '../validators';
 
@@ -22,6 +23,7 @@ export  class SignIn extends React.Component {
         }
 
         return (
+
             <form 
                 className="signin-form"
                 onSubmit={this.props.handleSubmit(values =>
@@ -30,6 +32,7 @@ export  class SignIn extends React.Component {
             
         
                 <label htmlFor="phoneNumber">Phone Number</label>
+
                 <Field 
                     component={Input} 
                     type="text" 
@@ -46,21 +49,21 @@ export  class SignIn extends React.Component {
                     id="password"
                     validate={[required, nonEmpty]}
                 />
-                
-            
+     
                 <button
                     type="submit"
-                   
                 >
+                      Sign in
                 </button>
+
             </form>
         );
     }
 }
 
 
+
 export default reduxForm({
     form: 'signin-form',
     //onSubmitFail: (errors, dispatch) => dispatch(focus('login', 'username'))
-   
 })(SignIn);
