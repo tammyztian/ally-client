@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   background-image: url(https://wallpaperplay.com/walls/full/6/9/9/54512.jpg#.XlGewdlY2e8.link);
   background-position: fixed;
   background-repeat: no-repeat;
@@ -41,4 +42,10 @@ button {
   margin-top: -50px;
   margin-left: -50px;
   
+  background-image: url();
+  height: 100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }

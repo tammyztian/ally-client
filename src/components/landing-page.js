@@ -15,6 +15,7 @@ export function LandingPage(props) {
             <h2>Welcome to Foo App</h2>
             <LoginForm />
             <Link to="/register">Register</Link>
+            <Link to="/add-contact">Add Contact</Link>
         </div>
     );
 }

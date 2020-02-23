@@ -1,25 +1,44 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import Input from './input';
-import {isTrimmed, required, nonEmpty, length} from '../validators';
 import '../index.css';
-import Button from 'react-bootstrap/Button'
+import {login} from '../actions/auth';
+import {required, nonEmpty} from '../validators';
 
-const passwordLength = length({min: 10, max: 72});
+
 
 export  class SignIn extends React.Component {
+    onSubmit(values) {
+        return this.props.dispatch(login(values.username, values.password));
+    }
 
     render() {
+        let error;
+        if (this.props.error) {
+            error = (
+                <div className="form-error" aria-live="polite">
+                    {this.props.error}
+                </div>
+            );
+        }
+
         return (
 
-            <form>
+            <form 
+                className="signin-form"
+                onSubmit={this.props.handleSubmit(values =>
+                this.onSubmit(values)
+            )}>
+            
+        
+                <label htmlFor="phoneNumber">Phone Number</label>
 
-                <div className="SignIn">
-                <label htmlFor="phone number">Phone number</label>
                 <Field 
                     component={Input} 
                     type="text" 
-                    name="phone number"
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    validate={[required, nonEmpty]}
                  />
                 <label htmlFor="password">Password</label>
 
@@ -27,12 +46,16 @@ export  class SignIn extends React.Component {
                     component={Input}
                     type="text"
                     name="password" 
+                    id="password"
+                    validate={[required, nonEmpty]}
                 />
+     
+                <button
+                    type="submit"
+                >
+                      Sign in
+                </button>
 
-                <Button type="submit">
-                    Sign In
-                </Button>
-                </div>
             </form>
         );
     }
@@ -41,5 +64,6 @@ export  class SignIn extends React.Component {
 
 
 export default reduxForm({
-    form: 'registration',
+    form: 'signin-form',
+    //onSubmitFail: (errors, dispatch) => dispatch(focus('login', 'username'))
 })(SignIn);
