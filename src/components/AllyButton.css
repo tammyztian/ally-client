@@ -2,11 +2,11 @@
 background-color:red;
 border-radius: 100%;
 cursor: pointer;
-height: 200px;
-width: 200px;
+height: 100px;
+width: 100px;
 text-align: center;
-vertical-align: 100%;
-
+vertical-align: middle;
+display: table-cell;
 }
 
 
