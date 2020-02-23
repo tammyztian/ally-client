@@ -7,8 +7,10 @@
   },
   "dependencies": {
     "jwt-decode": "^2.2.0",
-    "react": "^16.2.0",
+    "react": "16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.2.0",
+    "react-long": "^1.1.9",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",

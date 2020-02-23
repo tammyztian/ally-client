@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import AllyLandingPage from './components/AllyLandingPage';
+import AllyButton from './components/AllyButton'
+
 // import App from './components/app';
 import store from './store';
 import './index.css';
@@ -10,7 +11,7 @@ import './index.css';
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <AllyLandingPage />
+            <AllyButton />
         </Router>
     </Provider>,
     document.getElementById('root')
