@@ -2,12 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+/*
   background-image: url(https://i.pinimg.com/originals/a3/97/1f/a3971fe34ad0519b42f9931631f50175.jpg);
+*/
   background-position: center;
   background-size: cover;
-  position: relative;
+  background-color : #669999;
+position: relative;
   background-repeat: no-repeat;
-  opacity: 0.8;  
+  opacity: 0.8;
   color: black !important;
 }
 
@@ -28,7 +31,7 @@ label {
 button {
   background-color: transparent;
   color: black;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   border: 2px solid aliceblue;
   border-color: black;

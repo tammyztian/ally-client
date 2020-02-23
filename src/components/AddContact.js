@@ -56,7 +56,7 @@ export class AddContactsForm extends React.Component {
                 <label htmlFor="lastName2">Last name</label>
                 <Field component={Input} type="text" name="lastName2" />
                 
-               
+               <br/>
                 <button
                     type="submit"
                     disabled={this.props.pristine || this.props.submitting}>

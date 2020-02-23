@@ -16,7 +16,7 @@ import AllyButton from './components/Allybutton'
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <AllyButton/>
+        <App/>
         </Router>
     </Provider>,
     document.getElementById('root')

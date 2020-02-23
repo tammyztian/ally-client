@@ -9,6 +9,10 @@ import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
 import { AllyLandingPage } from './AllyLandingPage';
 import AddContact from './AddContact';
+import SignIn from './SignIn'
+import Register from './registration-form'
+
+
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
@@ -44,9 +48,9 @@ export class App extends React.Component {
         return (
             <div className="app">
                 <HeaderBar />
-                <Route exact path="/" component={AllyLandingPage} />
+                <Route exact path="/" component={SignIn} />
                 <Route exact path="/dashboard" component={Dashboard} />
-                <Route exact path="/register" component={AddContact} />
+                <Route exact path="/register" component={Register} />
                 <Route exact path="/add-contact" component={AddContact} />
 
             </div>

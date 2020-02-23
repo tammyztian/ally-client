@@ -4,6 +4,8 @@ import Input from './input';
 import '../index.css';
 import {login} from '../actions/auth';
 import {required, nonEmpty} from '../validators';
+import {Link, Redirect} from 'react-router-dom';
+
 
 
 
@@ -53,12 +55,12 @@ export  class SignIn extends React.Component {
                 />
      
                 <button
-                    type="submit"
-                >
+                    type="submit">
                       Sign in
                 </button>
 
             </form>
+            New User?  <Link to="/register"> Register Here</Link>
             </div>
         );
     }
