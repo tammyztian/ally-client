@@ -6,17 +6,21 @@ import {Link, Redirect} from 'react-router-dom';
 export function AllyLandingPage(props) {
   
     if (props.loggedIn) {
-        return <Redirect to="/home" />;
+        console.log('===this is props====', props)
+
+        return <Redirect to="/home" user={props.user} />;
     }
 
     return (
+
+        console.log('====this is props===', props),
         <div className="home">
 
             <h2>Hi, I'm Ally</h2>
 
-            <SignIn/>
+            <SignIn {...props}/>
 
-            <Link to="/register"> Register </Link>
+            <Link to="/register" loggedIn={props.loggedIn}> Register </Link>
 
 
         </div>

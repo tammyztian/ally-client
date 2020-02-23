@@ -10,6 +10,7 @@ export class Dashboard extends React.Component {
 
     render() {
         return (
+            console.log(this.props),
             <div className="dashboard">
                 <div className="dashboard-username">
                     Username: {this.props.username}
