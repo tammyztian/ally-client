@@ -1,15 +1,25 @@
-export class Allybutton extends React.Component {
+import React from 'react';
+
+export default  class Allybutton extends React.Component {
 //Emergency button
     render() {
         return (
-            <div className="button">
+            <div>
+                <div className="button">
+                
+                <style jsx>{`
+                button {
+                    color: red;
+                    height: 500px;
+                    width: 500px;
+                }
+                `}</style>
 
-            <button>
-           
-            </button>
+             </div>
+            </div>
+            
 
-           
-        </div>
+      
         );
     }
 }
